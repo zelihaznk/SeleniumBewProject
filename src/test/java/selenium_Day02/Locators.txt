@@ -1,0 +1,111 @@
+
+
+        Locator Nedir ?
+
+        Selenium ile test otomasyonu yapabilmek için, kullanacağımız "webElementleri" nerede bulacağını driver'a söylememiz gerekir.
+
+        WebElement nedir ?
+        Bir web uygulamasında kullanılan etkileşimli veya etkileşimsiz her şey bir "webElementtir."
+
+        locate işlemi içinn driver ile findElement() veya findElements() methodları kullanırız.
+
+        Locator bir webb sitesindeki herhangi bir webElementi driver'a tarif etme yöntemidir.
+        Bunun için webElementin html kodlarındaki ozellikleri kullanır.
+
+        Her bir html ogesi 3 temel unsurdan oluşur.
+
+        1) tag      2)attribute           3)attribute value
+
+        1) tag nedir ?  Bir html ogesinin baslangıcını ve bitisini belirtmek için kullanılan bir işaretleme dili parçasıdır.
+
+        2) attribute nedir ?  Bir html attribute'u Html ögenin davranışlarını kontrol etmek üzere acilis tag'i icine yazılan ozel kelimelerdir.
+         eşittirden önceki şeylere attribute denir. Esittirden öncekilere attribute denir.
+
+        3) Attribute value nedir ? Html'deki value, birlikte kullanıldığı ögenin değerini belirtmek için kullanılır.Farklı html ögeleri için farklı anlamlara sahip olabilir.
+
+           Not : Birden fazla html oge icin ayni tag, attribute ve attribute value kullanılabilir.
+
+           Locate islemi ise unique(benzersiz) olmalıdır.
+
+           Locate unique(benzersiz) olmazsa driver islem icin kendisine locate edilen elementlerden hangisine gidecegini bilemeyecegi icin
+           NoSuchElemtExeption verecek ve işlemi yapmayacaktır.
+
+           Özetle : "Locate" islemi, birbirine benzer ozelliklerde olabilen Html ogesini "Unique" olarak "belirleme" islemidir.
+
+
+
+           Selenium'da 8 adet locator vardır.
+
+           Bizim test yaparken bu 8 locator'dan hangisinin kullanacağımız WebElementi unique olarak tarif edebileceğini bulup onu kullanmamız gerekir.
+
+           Her bir locate işlemi için ilgili Web sayfasına manual olarak gidip, Html elementini incelememiz,uygun locator'i bularak webElement'i locaete etmemiz gerekir.
+           Ornek : Facebook giriş butonu, Amazonda Nutella ornegi gibi..
+
+           Locaterlerden 4 tanesi çok kullanılan html ogeleri ile yapılır.
+
+           1) id
+
+           WebELement aramaKutusu=
+                                 driver.findElement(By.id("twotabsearchtextbox"));
+
+           Web ogesini tanımlanana en populer yolu id kullanmaktır.
+
+           id en güvenli ve en hızlı locator seçeneği olarak kabul edilir ve her zaman birden çok locator arasında ilk öncelik olarak denenir.
+
+           id genelde unique olarak kullanılsa da developer'lar unique yapmayabilir. Locator olarak id sececeksek unique oladugundan emin olmamız gerekir.
+
+           2) name
+
+               WebELement aramaKutusu=
+                                 driver.findElement(By.name("field-keywords"));
+
+           3) classname
+
+                WebELement aramaKutusu=
+                                 driver.findElement(By.classname("nav-input nav-progressive-attribute"));
+
+                Class attribute'u genelde aynı islevi yapan bir grup Web Elementi tanımlamak icin kullanılır ve unique olmaz.
+
+                Class attribute'nun degeri bosluk iceriyorsa, By.classname() ile yapılan locator'lar sağlıklı calismayabilir.
+
+           4) tagname
+
+               Tag isimleri genelde aynı oldugundan unique degere ulasmak zordur.
+
+               Not : Unique olduktan sonra hangisinin kullandıldıgı onemli degil.
+
+
+               8 Locatorlerimden "2" tanesi link olarak tanımlanmış webElementlerde kullanılır. Sadece linkte geçerli.
+
+            5) linkText
+               Kullancağımız webElement bir link ise üzerindeki yazinin tamamini kullanarak locate edebiliriz.
+
+               WebELement aramaKutusu=
+                                 driver.findElement(By.linkText("Addresses"));
+               Not : Link üzerindeki bir String oldugundan buyuk,kucuk harf, bosluk gibi durumlara dikkat edilmelidir.
+
+            6) partialLinkText
+               Link üzerindeki yazının tamami degil bir kismini kullanarak da unique bir sonuca ulasabiliyorsak partialLinkText kullanılabilir.
+
+               WebELement aramaKutusu=
+                                 driver.findElement(By.partialLinkText("esses"));
+
+            Not : 7.ve 8. locaterler her webELement icin bu yontemlerle unique bir sonuca ulasmak mumkundur. En güclü webELementlerdir.
+
+            7) xpath()
+               En güclü locator'dir ve tum webElementleri unique olarak belirleyebilir.
+
+                WebELement aramaKutusu=
+                                 driver.findElement(By.xpath("//input[@type='text']"));
+
+                              //tagName[@attributeismi='attributeValue']
+                              //img[@class='s-image'] Amazondan örnek verdik, burda tüm resimleri gösterir
+                              (//img[@class='s-image'])[57]  57 yazan yere ne yazarsan sırayla o resimleri gösterir.
+
+                Her attribute kullanılabileceği icin bir Html ogesi icin birden fazla xpath yazılıp, bunlardan unique olan kullanılabilir.
+
+
+            8) cssSelector
+               Xpath'e benzer ve tum webElementler icin kullanılabilir. Farkı xpath'de kullandığımız  // ve @  isaretinin kullanılmamasıdır.
+
+                                             tagName[attributeismi='attributeValue']
