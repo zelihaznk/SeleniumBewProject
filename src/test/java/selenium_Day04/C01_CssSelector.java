@@ -33,12 +33,15 @@ public class C01_CssSelector {
 
         //b. Locate email textbox
         WebElement email = driver.findElement(By.cssSelector("#session_email"));
+        //driver.findElement(By.id("session_email"));
 
         //c. Locate password textbox ve
         WebElement password = driver.findElement(By.cssSelector("#session_password"));
+        //driver.findElement(By.id("session_password"));
 
         //d. Locate signin button
         WebElement singIn = driver.findElement(By.cssSelector("input[name='commit']"));
+        //driver.findElement(By.xpath("//*[@name='commit']"));
 
        // e. Asagidaki kullanıcı adını ve şifreyi girin ve sign in düğmesini tıklayın
         //i. Username : testtechproed@gmail.com

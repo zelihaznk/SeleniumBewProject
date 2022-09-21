@@ -16,7 +16,7 @@ public class C02_RelativeLocators {
         driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
 
-        https://www.diemol.com/selenium-4-demo/relative-locators-demo.html adresine gidelim
+       // https://www.diemol.com/selenium-4-demo/relative-locators-demo.html adresine gidelim
         driver.get("https://www.diemol.com/selenium-4-demo/relative-locators-demo.html");
 
         // Sayfadaki Berlin WebElementini relative locator kullanarak tiklayalim

@@ -30,7 +30,7 @@ public class Xpath {
 
 
         //2- Add Element butonuna basin
-        driver.findElement(By.xpath("(//button[normalize-space()='Add Element'])[1]")).click(); //  driver.findElement(By.xpath("//*[text()='Add Element']")).click(); olarakda yapılabilir
+        driver.findElement(By.xpath("(//button[text()='Add Element'])[1]")).click(); //  driver.findElement(By.xpath("//*[text()='Add Element']")).click(); olarakda yapılabilir
         Thread.sleep(3000);
 
         //Delete butonu’nun gorunur oldugunu test edin
@@ -43,7 +43,7 @@ public class Xpath {
         deleteButonu.click();
 
         //5- “Add/Remove Elements” yazisinin gorunur oldugunu test edin
-        WebElement addRemoveButonu = driver.findElement(By.xpath("//*[text()='Add/Remove Elements']"));// //h3[normalize-space()='Add/Remove Elements'] şeklinde de yazılabilir
+        WebElement addRemoveButonu = driver.findElement(By.xpath("//h3"));// //h3[normalize-space()='Add/Remove Elements'] şeklinde de yazılabilir
         if (addRemoveButonu.isDisplayed()){
             System.out.println("AddRemove yazisi PASSED");
         }else System.out.println("AddRemove yazisi FAİLED");

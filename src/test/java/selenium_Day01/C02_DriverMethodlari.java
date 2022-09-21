@@ -11,7 +11,7 @@ public class C02_DriverMethodlari {
 
         WebDriver driver = new ChromeDriver();
 
-        driver.manage().window().maximize();
+        driver.manage().window().maximize(); //Açılan pencereyi maximum boyutuna getirir.
 
 
         // Amazon sayfasına gidiniz

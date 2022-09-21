@@ -6,7 +6,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class C01_Ilkclass {
     public static void main(String[] args) {
 
-         /*
+         /**
         En temel haliyle bir otomasyon yapmak için
         Class'ımıza otomasyon için gerekli olan webdriver'in yerini göstermemiz gerekir
         bunun için java kutuphanesinde System.setProperty() method'unu kullanırız
@@ -30,7 +30,7 @@ public class C01_Ilkclass {
         System.out.println("===========================================");
         System.out.println(driver.getPageSource()); // Gidilen sayfanın kaynak kodlarını getirir.
 
-        driver.close();
+        //driver.close();
 
     }
 }

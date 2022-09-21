@@ -24,8 +24,11 @@ public class C04_Locators {
 
         //Amazonda Nutella arat
 
+
         WebElement aramaKutusu = driver.findElement(By.id("twotabsearchtextbox"));
         aramaKutusu.sendKeys("Nutella" + Keys.ENTER);
+
+
 
         //WebElement aramaKutusu2 = driver.findElement(By.className("field-keywords"));
         //aramaKutusu2.sendKeys("Nutella" + Keys.ENTER);

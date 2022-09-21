@@ -23,7 +23,7 @@ public class C01_ManageMethodlari {
         WebDriver driver = new ChromeDriver();
 
 
-        //Amazon soyfasina gidelim. https://www.amazon.com/
+        //Amazon sayfasina gidelim. https://www.amazon.com/
         driver.get("https://www.amazon.com/");
 
         //Sayfanin konumunu ve boyutlarini yazdirin

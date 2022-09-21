@@ -27,9 +27,10 @@ public class C05_findelements {
         List<WebElement> tag2 = driver.findElements(By.tagName("input"));
         System.out.println("input tag'inin sayisi :"+tag2.size());
 
-        System.out.println(driver.findElement(By.xpath("(//*[@class='a-color-base headline truncate-2line'])[1]")).getText());
 
-        driver.close();
+        System.out.println(driver.findElement(By.xpath("//*[text()='Gaming accessories']")).getText());
+
+        //driver.close();
 
 
 
