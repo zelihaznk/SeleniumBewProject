@@ -37,8 +37,14 @@ public class TekrarTesti {
             String sonucYazisi = aramaSonucu.get(0).getText();
             System.out.println(sonucYazisi);
 
+            //List işlemi yaparken bizim öncelikli görevimiz listi bir web elemente atayarak kullanmaktır.
+            // Daha sonra ise locate işlemini yaparken driver.findElements olarak sonu "s" harfli olan method kullanılır.
+            // Çünkü list birden fazla değer döndürdüğü için çoğul takısı kullanılmalıdır.
+
+
+
             //d. Sadece sonuç sayısını yazdırınız
-            String [] sonucYazisiE = sonucYazisi.split(" ");
+            String[] sonucYazisiE = sonucYazisi.split(" ");
             System.out.println("City Bike arama sonucu = "+sonucYazisiE[2]);
 
             // Sonuc sayısını LAMBDA ile yazdırınız

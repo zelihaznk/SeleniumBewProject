@@ -1,5 +1,6 @@
 package selenium_Day03;
 
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -44,6 +45,8 @@ public class GetMethodlari {
         if (actualTagName.equals(expectedTagName)){
             System.out.println("TagName testi PASSED " + actualTagName);
         }else System.out.println("TagName testi FAILED");
+
+        //Assert.assertTrue(aramaKutusu.getTagName().contains("input"));
 
         // Arama kutusunun name attributenin field-keywords  oldugunu test ediniz.
         String expectedAtributuName = "field-keywords";
